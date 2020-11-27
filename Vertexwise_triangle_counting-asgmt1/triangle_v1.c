@@ -2,7 +2,24 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define BILLION 1000000000L;
+void print2DMatrix(int** matrix, int size){
+    int i = 0;
+    for(i = 0; i < size; i++){
+        int j = i;
+        for(j = 0; j < size; j++){
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void print1DMatrix(int* array, int size){
+    int i = 0;
+    for(i = 0; i < size; i++){
+        printf("%d: %d \n",i+1, array[i]);
+    }
+}
+
 
 
 
@@ -47,15 +64,33 @@ int main(int argc, char* argv[]){
         c3[i] = 0;
 
     }
-
-     for (unsigned int i = 0; i <  nodes; i++) {
-         for (unsigned int j = 0; j < nodes; j++){
-             printf("\t%d ", adjacencyMatrix[i][j]);
-         } 
+    print1DMatrix(c3,nodes);
+    //  for (unsigned int i = 0; i <  nodes; i++) {
+    //      for (unsigned int j = 0; j < nodes; j++){
+    //          printf("\t%d ", adjacencyMatrix[i][j]);
+    //      } 
             
-         printf("\n");
-     }
-       
+    //      printf("\n");
+    //  }
+    print2DMatrix(adjacencyMatrix,nodes);
+
+    for (unsigned int i = 1; i < nodes-2; i++)
+    {
+        for (unsigned int j = 1; j < nodes-1; j++)
+        {
+            for (unsigned int k = 1; k < nodes; k++)
+            {
+                if(adjacencyMatrix[i][j]==1 && adjacencyMatrix[j][k]==1 && adjacencyMatrix[k][i] == 1){
+                    c3[i]++;
+                    c3[j]++;
+                    c3[k]++;
+                }
+            }
+            
+        }
+        
+    }
+    print1DMatrix(c3, nodes);
     
 
 
