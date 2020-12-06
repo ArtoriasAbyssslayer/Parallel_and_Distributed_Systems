@@ -20,10 +20,10 @@ Tα αρχεία που δείχνουν την απόδωση του κώδικ
   * [NACA_v3.png](https://github.com/harryfilis/Parallel_and_Distributed_Systems_Assignments/blob/master/Vertexwise_triangle_counting-asgmt1/NACA_v3.png)
   * [youtube_v3.png](https://github.com/harryfilis/Parallel_and_Distributed_Systems_Assignments/blob/master/Vertexwise_triangle_counting-asgmt1/youtube_v3.png)
   
-  Ο φάκελος matrices περιέχει όλους τους πίνακες που χρησιμοποιήθηκαν απο το Matrix Market
-  * readmtxfile.c ~ κώδικας που διαβάζει αρχείο πίνακα
-  * Makefile ~ Απαιτούμενο Makefile που κτιζει τα προγράματα και τα τρέχει.
-  * bashscript.sh ~ ShellScript που κάνει αυτόματα την δουλειά του testing.
-  Η ανάλυση γίνεται στο αρχείο της αναφοράς.
-  Το μέρος v4 δεν έγινε λόγω έλλειψης χρόνου.
-  ### Συγγραφέας: Χάρης Φίλης ΑΕΜ:9449 email:charisfilis@ece.auth.gr 
+  Ο φάκελος matrices περιέχει όλους τους πίνακες που χρησιμοποιήθηκαν απο το Matrix Market</br>
+  * readmtxfile.c ~ κώδικας που διαβάζει αρχείο πίνακα</br>
+  * Makefile ~ Απαιτούμενο Makefile που κτιζει τα προγράματα και τα τρέχει.</br>
+  * bashscript.sh ~ ShellScript που κάνει αυτόματα την δουλειά του testing.</br>
+  Η ανάλυση γίνεται στο αρχείο της αναφοράς.</br>
+  Το μέρος v4 δεν έγινε λόγω έλλειψης χρόνου.</br>
+  ### Συγγραφέας: Χάρης Φίλης ΑΕΜ:9449 email:charisfilis@ece.auth.gr </br>
