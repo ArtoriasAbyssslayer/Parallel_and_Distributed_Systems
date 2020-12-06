@@ -24,7 +24,7 @@ Tα αρχεία που δείχνουν την απόδωση του κώδικ
   * readmtxfile.c ~ κώδικας που διαβάζει αρχείο πίνακα</br>
   * Makefile ~ Απαιτούμενο Makefile που κτιζει τα προγράματα και τα τρέχει.</br>
   * bashscript.sh ~ ShellScript που κάνει αυτόματα την δουλειά του testing.</br>
-  Ο φάκελος time περιέχει λίστες διαδοχικων τρεξιμάτων των τεστ με διαφορετικά numberOfWorkers πχ:
+Ο φάκελος time περιέχει λίστες διαδοχικων τρεξιμάτων των τεστ με διαφορετικά numberOfWorkers πχ:
   ```js
 
   /triangle_v3_cilk ./matrixes/belgium_osm/belgium_osm.mtx 1 2 
