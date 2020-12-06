@@ -13,3 +13,10 @@ Given an adjacency matrix A in matrix market format, our code calculates in how 
 Όσον αφορα το 3.1 ο κώδικας που υλοποιήθηκε σε matlab είναι ο εξής
   * [3-1.m](https://github.com/harryfilis/Parallel_and_Distributed_Systems_Assignments/blob/master/Vertexwise_triangle_counting-asgmt1/3-1.m)
   
+Tα αρχεία που δείχνουν την απόδωση του κώδικα (για του αντίστοιχους γράφους) σε παραλληλισμό είναι τα εξής png:
+  * [belgium_v3.png](https://github.com/harryfilis/Parallel_and_Distributed_Systems_Assignments/blob/master/Vertexwise_triangle_counting-asgmt1/belgium_v3.png)
+  * [cilskian_v3.png](https://github.com/harryfilis/Parallel_and_Distributed_Systems_Assignments/blob/master/Vertexwise_triangle_counting-asgmt1/cilskian_v3.png)
+  * [dble_v3.png](https://github.com/harryfilis/Parallel_and_Distributed_Systems_Assignments/blob/master/Vertexwise_triangle_counting-asgmt1/dble_v3.png)
+  * [NACA_v3.png](https://github.com/harryfilis/Parallel_and_Distributed_Systems_Assignments/blob/master/Vertexwise_triangle_counting-asgmt1/NACA_v3.png)
+  * [youtube_v3.png](https://github.com/harryfilis/Parallel_and_Distributed_Systems_Assignments/blob/master/Vertexwise_triangle_counting-asgmt1/youtube_v3.png)
+  
