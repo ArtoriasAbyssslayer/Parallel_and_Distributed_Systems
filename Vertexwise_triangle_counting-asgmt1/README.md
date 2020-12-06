@@ -8,4 +8,6 @@
   * [triangle_v3.c](https://github.com/harryfilis/Parallel_and_Distributed_Systems_Assignments/blob/master/Vertexwise_triangle_counting-asgmt1/triangle_v3.c)
   * [triangle_v3_cilk.c](https://github.com/harryfilis/Parallel_and_Distributed_Systems_Assignments/blob/master/Vertexwise_triangle_counting-asgmt1/triangle_v3_cilk.c)
   * [triangle_v3_openmp.c](https://github.com/harryfilis/Parallel_and_Distributed_Systems_Assignments/blob/master/Vertexwise_triangle_counting-asgmt1/triangle_v3_opmp.c)
+Όσον αφορα το 3.1 ο κώδικας που υλοποιήθηκε σε matlab είναι ο εξής
+  *
   
