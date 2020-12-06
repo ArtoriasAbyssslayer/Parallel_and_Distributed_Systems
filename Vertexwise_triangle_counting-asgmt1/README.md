@@ -24,6 +24,15 @@ Tα αρχεία που δείχνουν την απόδωση του κώδικ
   * readmtxfile.c ~ κώδικας που διαβάζει αρχείο πίνακα</br>
   * Makefile ~ Απαιτούμενο Makefile που κτιζει τα προγράματα και τα τρέχει.</br>
   * bashscript.sh ~ ShellScript που κάνει αυτόματα την δουλειά του testing.</br>
+  Ο φάκελος time περιέχει λίστες διαδοχικων τρεξιμάτων των τεστ με διαφορετικά numberOfWorkers πχ:
+  ```js
+
+  /triangle_v3_cilk ./matrixes/belgium_osm/belgium_osm.mtx 1 2 
+  There are 2 workers.
+  Matrix Loaded, now Searching!
+  Sum: 1260 
+  Duration: 0.018063 
+  ``` 
   Η ανάλυση γίνεται στο αρχείο της αναφοράς.</br>
   Το μέρος v4 δεν έγινε λόγω έλλειψης χρόνου.</br>
   ### Συγγραφέας: Χάρης Φίλης ΑΕΜ:9449 email:charisfilis@ece.auth.gr </br>
