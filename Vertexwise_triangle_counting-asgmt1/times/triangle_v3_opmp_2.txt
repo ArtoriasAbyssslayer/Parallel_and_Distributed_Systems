@@ -1,0 +1,226 @@
+./triangle_v3_openmp ./matrixes/belgium_osm/belgium_osm.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2420 
+Duration: 0.020161 
+
+./triangle_v3_openmp ./matrixes/com-Youtube/com-Youtube.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 3056386 
+Duration: 2.214906 
+
+./triangle_v3_openmp ./matrixes/dblp-2010/dblp-2010.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 1676652 
+Duration: 0.199328 
+
+./triangle_v3_openmp ./matrixes/mycielskian13/mycielskian13.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 0 
+Duration: 9.261519 
+
+./triangle_v3_openmp ./matrixes/NACA0015/NACA0015.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2075635 
+Duration: 0.286495 
+
+./triangle_v3_openmp ./matrixes/belgium_osm/belgium_osm.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2420 
+Duration: 0.020555 
+
+./triangle_v3_openmp ./matrixes/com-Youtube/com-Youtube.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 3056386 
+Duration: 2.381298 
+
+./triangle_v3_openmp ./matrixes/dblp-2010/dblp-2010.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 1676652 
+Duration: 0.213246 
+
+./triangle_v3_openmp ./matrixes/mycielskian13/mycielskian13.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 0 
+Duration: 9.797120 
+
+./triangle_v3_openmp ./matrixes/NACA0015/NACA0015.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2075635 
+Duration: 0.327984 
+
+./triangle_v3_openmp ./matrixes/belgium_osm/belgium_osm.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2420 
+Duration: 0.020555 
+
+./triangle_v3_openmp ./matrixes/com-Youtube/com-Youtube.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 3056386 
+Duration: 2.381298 
+
+./triangle_v3_openmp ./matrixes/dblp-2010/dblp-2010.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 1676652 
+Duration: 0.213246 
+
+./triangle_v3_openmp ./matrixes/mycielskian13/mycielskian13.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 0 
+Duration: 9.797120 
+
+./triangle_v3_openmp ./matrixes/NACA0015/NACA0015.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2075635 
+Duration: 0.327984 
+
+./triangle_v3_openmp ./matrixes/belgium_osm/belgium_osm.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2420 
+Duration: 0.020216 
+
+./triangle_v3_openmp ./matrixes/com-Youtube/com-Youtube.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 3056386 
+Duration: 2.026842 
+
+./triangle_v3_openmp ./matrixes/dblp-2010/dblp-2010.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 1676652 
+Duration: 0.200812 
+
+./triangle_v3_openmp ./matrixes/mycielskian13/mycielskian13.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 0 
+Duration: 9.195191 
+
+./triangle_v3_openmp ./matrixes/NACA0015/NACA0015.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2075635 
+Duration: 0.239017 
+
+./triangle_v3_openmp ./matrixes/belgium_osm/belgium_osm.mtx 1 2
+./triangle_v3_openmp ./matrixes/belgium_osm/belgium_osm.mtx 1 2
+./triangle_v3_openmp ./matrixes/belgium_osm/belgium_osm.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2420 
+Duration: 0.022640 
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2420 
+Duration: 0.022677 
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2420 
+Duration: 0.022246 
+
+
+
+./triangle_v3_openmp ./matrixes/com-Youtube/com-Youtube.mtx 1 2
+./triangle_v3_openmp ./matrixes/com-Youtube/com-Youtube.mtx 1 2
+./triangle_v3_openmp ./matrixes/com-Youtube/com-Youtube.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 3056386 
+Duration: 2.300610 
+case 1 
+Matrix Loaded, now Searching!
+Sum: 3056386 
+Duration: 2.303305 
+
+
+case 1 
+Matrix Loaded, now Searching!
+Sum: 3056386 
+Duration: 2.300556 
+./triangle_v3_openmp ./matrixes/dblp-2010/dblp-2010.mtx 1 2
+./triangle_v3_openmp ./matrixes/dblp-2010/dblp-2010.mtx 1 2
+
+./triangle_v3_openmp ./matrixes/dblp-2010/dblp-2010.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 1676652 
+Duration: 0.199092 
+
+./triangle_v3_openmp ./matrixes/mycielskian13/mycielskian13.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 1676652 
+Duration: 0.217096 
+
+./triangle_v3_openmp ./matrixes/mycielskian13/mycielskian13.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 1676652 
+Duration: 0.208300 
+
+./triangle_v3_openmp ./matrixes/mycielskian13/mycielskian13.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 0 
+Duration: 8.989056 
+case 1 
+Matrix Loaded, now Searching!
+Sum: 0 
+Duration: 8.987908 
+
+
+case 1 
+Matrix Loaded, now Searching!
+Sum: 0 
+Duration: 8.991614 
+./triangle_v3_openmp ./matrixes/NACA0015/NACA0015.mtx 1 2
+./triangle_v3_openmp ./matrixes/NACA0015/NACA0015.mtx 1 2
+
+./triangle_v3_openmp ./matrixes/NACA0015/NACA0015.mtx 1 2
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2075635 
+Duration: 0.307802 
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2075635 
+Duration: 0.312519 
+
+case 1 
+Matrix Loaded, now Searching!
+Sum: 2075635 
+Duration: 0.310808 
+
+
+Matrix Loaded!
+
+Triangle Sum: 61743915
+Duration: 9.501022
+
+
+Matrix Loaded!
+
+Triangle Sum: 61743915
+Duration: 9.507290
+
+Matrix Loaded!
+
+Triangle Sum: 61743915
+Duration: 9.529972
+
