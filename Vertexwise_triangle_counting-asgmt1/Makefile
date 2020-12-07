@@ -3,7 +3,7 @@ MPICC = mpicc
 CILKCC=/usr/local/OpenCilk-9.0.1-Linux/bin/clang
 CFLAGS = -O2
 default: all 
-
+matrixfile = ./matrices/NACA0015/NACA0015.mtx
 triangle_v1: triangle_v1.c
 	$(CC) $(CFLAGS) -o triangle_v1 triangle_v1.c
 
