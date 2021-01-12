@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"C_Cpp.errorSquiggles": "Enabled",
+		"javascript.referencesCodeLens.enabled": true,
+		"typescript.referencesCodeLens.enabled": true,
+		"typescript.implementationsCodeLens.enabled": true,
+		"workbench.editor.limit.enabled": true
+	}
+}
