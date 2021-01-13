@@ -24,6 +24,10 @@ double *read_corel(int *n, int *d, char *file_path){
     }
 
     X = (double *)malloc((*n) * (*d) * sizeof(double));
+    if (X == NULL)
+    {
+        printf("Cannot allocate memory!");
+    }
 
     for(int i=0; i<*n; i++){
         int row;
@@ -56,7 +60,11 @@ double *read_mini(int *n, int *d, char *file_path){
     *d = 50;
 
     X = (double *)malloc((*n) * (*d) * sizeof(double));
-    
+    if (X == NULL)
+    {
+        printf("Cannot allocate memory!");
+    }
+
     int temp;
     for(int i=0; i<2; i++){
         int got = fscanf(matFile, "%d", &temp);
@@ -98,6 +106,10 @@ double *read_features(int *n, int *d, char *file_path){
     *d = 518;
 
     X = (double *)malloc((*n) * (*d) * sizeof(double));
+    if (X == NULL)
+    {
+        printf("Cannot allocate memory!");
+    }
 
     int temp;    
     for(int i=0; i<*n; i++){
@@ -139,6 +151,9 @@ double *read_tv(int *n, int *d, char *file_path){
     *d = 17;
 
     X = (double *)malloc((*n) * (*d) * sizeof(double));
+    if(X == NULL){
+        printf("Cannot allocate memory!");
+    }
 
     int temp;
     double val;

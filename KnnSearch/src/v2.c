@@ -184,16 +184,17 @@ void searchVPT(double *x_query, node *root, int d, int k, minArray* min_arr){
 
 
 
-void main(int argc, char *argv[]){
+int main(int argc, char **argv){
+    printf("Start");
     //MPI
     //Initialize the MPI invironment
-  
 
-    MPI_Init( NULL , NULL);
-    
+    MPI_Init(&argc, &argv);
+
     //p number of processes
     int p;
     MPI_Comm_size( MPI_COMM_WORLD , &p);
+    printf("Mpi environment set");
 
     //rank of the process
 
@@ -203,7 +204,7 @@ void main(int argc, char *argv[]){
     //argv0 == path to matrix
     //argv1 == k
     
-    int k = atoi(argv[2]);
+    int k = atoi(argv[4]);
     int n;
     int d;
     //initialize the chunks
@@ -227,9 +228,13 @@ void main(int argc, char *argv[]){
     node *root;
     minArray *min_arr;
 
-    if(!world_rank){
+    if(world_rank == 0){
         
-       double *X = read_X(&n,&d,argv[1]);
+       double *X = read_X(&n,&d,argv[3]);
+       if(X == NULL){
+           printf("Cannot allocate memory\n");
+       }
+       printf("Matrix read!"); 
        chunks = n/p;
        start = clock();
 
@@ -294,8 +299,8 @@ void main(int argc, char *argv[]){
            }
            
        }
-       
-
+       //debug print
+        printf("Hello World");
     }
     //send n,m values to other processes
 
@@ -426,8 +431,8 @@ void main(int argc, char *argv[]){
 
     y_i_send = malloc(process_n * d * sizeof(double));
 
-    double* s_knn_result_ndist_send = malloc(process_m * k * sizeof(double));
-    int* s_knn_result_nidx_send = malloc(process_m * k * sizeof(int));
+    double *s_knn_result_ndist_send = malloc(process_m * k * sizeof(double));
+    int *s_knn_result_nidx_send = malloc(process_m * k * sizeof(int));
     //copy the block of memory from x_i_data to y_i_send etc.
     memcpy(y_i_send,x_i_data,process_m*d*sizeof(double));
     memcpy(s_knn_result_ndist_send, s_knn_result.ndist, process_m*k*sizeof(double));
@@ -467,7 +472,7 @@ void main(int argc, char *argv[]){
 
         //Prepare x_query
 
-        double* x_query = malloc(d * sizeof(double));
+        double *x_query = malloc(d * sizeof(double));
         for (int i = 0; i < process_m; i++)
         {
             //Initialize min_arr
@@ -516,5 +521,17 @@ void main(int argc, char *argv[]){
     }
 
     MPI_Finalize();
+    free(x_i_data);
+    free(s_knn_result.ndist);
+    free(s_knn_result.nidx);
+    free(root);
+    free(min_arr->ndist);
+    free(min_arr->nidx);
+    free(min_arr);
+    free(y_i_send);
+    free(s_knn_result_ndist_send);
+    free(s_knn_result_nidx_send);
     
+    return EXIT_SUCCESS; 
+
 }

@@ -130,7 +130,7 @@ void main(int argc, char **argv)
     //argv[1] = path to matrix argv[2]= k
     int n ;
     int d ;
-    int k = atoi(argv[2]);
+    int k = atoi(argv[4]);
 
     clock_t begin;
     clock_t end;
@@ -157,7 +157,7 @@ void main(int argc, char **argv)
 
         double *x_data;
 
-        x_data = read_X(&n, &d, argv[1]);
+        x_data = read_X(&n, &d, argv[3]);
         chunks = n/p;
         // Start measuring time
         begin = clock();
