@@ -204,7 +204,7 @@ int main(int argc, char **argv){
     //argv0 == path to matrix
     //argv1 == k
     
-    int k = atoi(argv[4]);
+    int k = atoi(argv[2]);
     int n;
     int d;
     //initialize the chunks
@@ -230,7 +230,7 @@ int main(int argc, char **argv){
 
     if(world_rank == 0){
         
-       double *X = read_X(&n,&d,argv[3]);
+       double *X = read_X(&n,&d,argv[1]);
        if(X == NULL){
            printf("Cannot allocate memory\n");
        }
