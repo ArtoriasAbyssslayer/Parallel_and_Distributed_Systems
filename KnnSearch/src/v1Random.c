@@ -5,6 +5,7 @@
 #include <math.h>
 #include <mpi.h>
 #include <string.h>
+#include <sys/time.h>
 
 #ifndef RAND_MAX
 #define RAND_MAX ((int) ((unsigned) ~0 >> 1))
@@ -99,7 +100,7 @@ double randomReal(double low, double high) {
     return (low + d * (high - low));
 }
 
-void main() {
+void main(int argc, char **argv) {
     // MPI
     // Initialize the MPI environment
     MPI_Init(NULL, NULL);
@@ -112,9 +113,12 @@ void main() {
     int world_rank;
     MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
 
-    int n = 20;
-    int d = 2;
-    int k = 3;
+    int n = atoi(argv[1]);
+    int d = atoi(argv[2]);
+    int k = atoi(argv[3]);
+
+    clock_t begin;
+    clock_t end;
 
     int chunks = n / p;
     double* x_i_data;
@@ -130,6 +134,11 @@ void main() {
     if(world_rank == 0) {
         srand(time(NULL));
 
+        printf("n: %d\n", n);
+        printf("d: %d\n", d);
+        printf("k: %d\n", k);
+        printf("Processes: %d\n", p);
+
         double* x_data = (double *)malloc(n * d * sizeof(double));
         if(x_data == NULL) {
             printf("error allocating memory\n");
@@ -139,8 +148,12 @@ void main() {
         // Create an X array n x d
         for(int i = 0; i < n * d; i++) {
             // x_data[i] = randomReal(0, 10);
-            x_data[i] = i;
+            x_data[i] = 2*i;
         }
+
+        // Start measuring time
+        begin = clock();
+
 
         if(p > 1) {
             //Broadcast to all other processes
@@ -148,7 +161,7 @@ void main() {
                 // MPI_Send to each process the appropriate array
                 MPI_Send(&x_data[i * chunks * d], chunks * d, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
             }
-            MPI_Send(&x_data[(p-1) * chunks * d], (chunks + n % d) * d, MPI_DOUBLE, p-1, 0, MPI_COMM_WORLD);
+            MPI_Send(&x_data[(p-1) * chunks * d], (chunks + n % p) * d, MPI_DOUBLE, p-1, 0, MPI_COMM_WORLD);
         }
 
         // After sending the message and receiving confirmation we are ready to call kNN on our data
@@ -166,8 +179,8 @@ void main() {
     else if (world_rank == p - 1)
     {
         //Initialize variables for this process
-        process_n = (chunks + n % d);
-        process_m = (chunks + n % d);
+        process_n = (chunks + n % p);
+        process_m = (chunks + n % p);
         x_i_data = malloc(process_m * d * sizeof(double));
 
         // First receive from the mother process
@@ -295,25 +308,27 @@ void main() {
             printf("\n");
             for(int j = 0; j < process_m; j++) {
                 for(int kappa = 0; kappa < k; kappa++) {
-                    printf("%f\n", temp[process_m * kappa + j]);
+                    // printf("%f\n", temp[process_m * kappa + j]);
                     knnResult.ndist[i * process_m + j + kappa*n] = temp[process_m * kappa + j];
-                    printf("%d\n", i * process_m + j + kappa*n);
+                    // printf("%d\n", i * process_m + j + kappa*n);
                 }
             }
         }
         // For i = 0
         for(int j = 0; j < process_m; j++) {
             for(int kappa = 0; kappa < k; kappa++) {
-                printf("%f\n", sub_knnresult.ndist[process_m * kappa + j]);
                 knnResult.ndist[j + kappa*n] = sub_knnresult.ndist[process_m * kappa + j];
-                printf("%d\n", j + kappa*n);
             }
         }
 
-        printf("FINAL KNN");
-        for(int i = 0; i < n * k ; i++) {
-            printf("%f \n", knnResult.ndist[i]);
-        }
+        // printf("FINAL KNN");
+        // for(int i = 0; i < n * k ; i++) {
+        //     printf("%d %f \n",i, knnResult.ndist[i]);
+        // }
+
+        end = clock();
+        double duration = (double)(end - begin) / CLOCKS_PER_SEC;
+        printf("Duration: %f\n", duration);
     }
 
     // Finalize the MPI environment.
