@@ -7,7 +7,7 @@
 2. type make/make all
 3. go to output directory where executables are stored
 To run the Sequential version v0
-```console
+```shellscript
 usage: ./v0 [n] [d] [m] [k]
 #all arguments are needed
 #n = number of points/vectors
