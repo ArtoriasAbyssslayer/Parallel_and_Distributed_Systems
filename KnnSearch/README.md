@@ -2,6 +2,51 @@
 
 ### folder [matrices]() ~ Matrices given to run the code on
 ### folder [src]() ~ Source code of the project
+# USAGE
+1. Go to src directory
+2. type make/make all
+3. go to output directory where executables are stored
+To run the Sequential version v0
+```console
+usage: ./v0 [n] [d] [m] [k]
+#all arguments are needed
+#n = number of points/vectors
+#d = number of dimensions
+#k = number of nearest neibours
+#m = number of query points/vectors
+```
+To run the random v1 or v2 Asychronus version with mpi
+```console
+usage: mpicc -n [n] ./v1Random [n] [d] [k]
+```
+To run v1 or v2 with inpute the matrices given in the matrices folder
+```
+usage: mpicc -n [n] ./v1  "path to matrix file" [k]
+```
+To run v1 or v2 with input the matrices given in matrices folder use the shellscript for link4 matrices for example and put [n] = numberOfProcesses, [k]:
+```
+mkdir -p ../log/output_link4
+timeNow=$(date +%d-%b-%H_%M_%S)
+k = [k]
+echo "$timeNow"
+touch ""../log/output_link4/{timeNow}output.txt"
+declare -a matrices_link4=("../matrices/link_4/TV_News_Channel_Commercial_Detection_Dataset/BBC.txt" "../matrices/link_4/TV_News_Channel_Commercial_Detection_Dataset/CNN.txt" "../matrices/link_4/TV_News_Channel_Commercial_Detection_Dataset/CNNIBN.txt" "../matrices/link_4/TV_News_Channel_Commercial_Detection_Dataset/NDTV.txt" "../matrices/link_4/TV_News_Channel_Commercial_Detection_Dataset/TIMESNOW.txt")
+declare -a programs=("./../output/v1" "./../output/v2")
+for program in "${programs[@]}"
+do
+    for matrix in "{$matrices_link4[@]}"
+    do
+        echo "$program"  "$matrix" k = "$k" 
+        mpicc -n [n] "$program" "$matrix" "$k"
+        echo
+    done
+    echo
+done
+
+
+```
+
+
 
 
 ## Αναφορά
