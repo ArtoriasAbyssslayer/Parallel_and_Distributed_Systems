@@ -16,7 +16,7 @@ usage: ./v0 [n] [d] [m] [k]
 #m = number of query points/vectors
 ```
 To run the random v1 or v2 Asychronus version with mpi
-```console
+```shell 
 usage: mpicc -n [n] ./v1Random [n] [d] [k]
 ```
 To run v1 or v2 with inpute the matrices given in the matrices folder
