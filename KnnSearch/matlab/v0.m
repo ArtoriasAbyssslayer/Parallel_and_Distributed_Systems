@@ -4,6 +4,7 @@ m = 10
 d = 2
 k = 5
 
+
 min = 0
 max = 100
 randomBounded = (max-min).*rand(1000,1) + min;
