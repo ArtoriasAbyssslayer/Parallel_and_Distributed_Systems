@@ -16,11 +16,11 @@ usage: ./v0 [n] [d] [m] [k]
 ```
 To run the random v1 or v2 Asychronus version with mpi
 ```shell 
-usage: mpicc -n [n] ./v1Random [n] [d] [k]
+usage: mpirun -n [n] ./v1Random [n] [d] [k]
 ```
 To run v1 or v2 with inpute the matrices given in the matrices folder
 ```
-usage: mpicc -n [n] ./v1  "path to matrix file" [k]
+usage: mpirun -n [n] ./v1  "path to matrix file" [k]
 ```
 To run v1 or v2 with input the matrices given in matrices folder use the shellscript for link4 matrices for example and put [n] = numberOfProcesses, [k]:
 ```
