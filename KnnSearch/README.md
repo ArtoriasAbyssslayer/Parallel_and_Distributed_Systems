@@ -36,7 +36,7 @@ do
     for matrix in "{$matrices_link4[@]}"
     do
         echo "$program"  "$matrix" k = "$k" 
-        mpicc -n [n] "$program" "$matrix" "$k"
+        mpirun -n [n] "$program" "$matrix" "$k"
         echo
     done
     echo
